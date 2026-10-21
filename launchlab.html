@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LaunchLab quiz · Semester Recap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg aria-hidden="true" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#FFC531"/><path d="M10 17l4 4 8-10" fill="none" stroke="#0F1B3D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Semester Recap
+    </a>
+    <nav class="tabs" aria-label="Sessions">
+      <a class="tab" href="index.html">Home</a>
+      <a class="tab active" href="launchlab.html" aria-current="page">LaunchLab</a>
+    </nav>
+  </div>
+</header>
+
+<main class="quiz-main" data-session="launchlab">
+  <a class="back" href="index.html">
+    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+    All sessions
+  </a>
+
+  <div class="quiz-title">
+    <span class="pill">Session 01 · LaunchLab</span>
+    <h1>Vibe Coding: design, build, ship</h1>
+  </div>
+
+  <section class="quiz-card" id="quiz-card" aria-live="polite">
+    <div class="quiz-meta">
+      <span>Question <span id="q-num">1</span> of <span id="q-total">8</span></span>
+      <span>Score <span id="q-score">0</span></span>
+    </div>
+    <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+    <h2 class="question" id="question"></h2>
+    <div class="choices" id="choices"></div>
+    <div class="feedback" id="feedback" hidden>
+      <div class="feedback-box" id="feedback-box">
+        <strong id="feedback-title"></strong>
+        <span id="feedback-why"></span>
+      </div>
+      <button class="btn" type="button" id="next">Next question</button>
+    </div>
+  </section>
+
+  <section class="result" id="result" hidden aria-live="polite">
+    <span class="result-label">Your score</span>
+    <div class="result-score" id="final-score"></div>
+    <p id="final-msg"></p>
+    <div class="result-actions">
+      <button class="btn btn-yellow" type="button" id="replay">Play again</button>
+      <a class="btn btn-ghost" href="index.html">All sessions</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Built with Claude Design, Claude Code, GitHub and Vercel.</div>
+</footer>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
